@@ -7,6 +7,8 @@ Roku Flashback app is an online video streaming application which supports vario
 
 The project is in the initial stages of design and research for development.
 
+Check out dev notes here: https://docs.google.com/document/d/18YiX1eZoPKYU6xXTc4OQ0QqivnMZNvTq4VZMMrxH5FM/edit?usp=sharing
+
 
 ## Installation
 
