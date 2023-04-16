@@ -1,0 +1,82 @@
+#main_header {
+    top:0px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    width: 150px;
+    align-items: baseline;
+}
+
+#render-container {margin-top: 80px;}
+
+.login-submit{
+    margin-top:1em;
+}
+
+.log-in label{
+    margin: 1em 0.5em 0.5em 0;
+}
+
+.missing-field{
+    border:2px solid red;
+}
+
+.float-right {
+    float: right;
+}
+
+.signup { 
+    margin-left: 1.5rem;
+}
+
+.user-panel {
+    text-align: center;
+}
+
+.user-panel ul li {
+    list-style: none;
+}
+
+.userpanel {
+    display: inline-block;
+    margin: 1em;
+}
+
+/* kids movie page style */
+.movie-feature-card{
+    position:relative;
+    margin-bottom: 40px;
+}
+
+.feature-img {
+    display:block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+    position: relative;
+    z-index: 0;
+}
+
+.k-movie-detail{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 16px;
+    z-index: 4;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+p{
+    color: #fff;
+}
