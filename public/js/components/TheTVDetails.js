@@ -1,38 +1,42 @@
 const apiKey = 'k_xq3uunx4';
 
 export default {
-    name: 'TheKidsMovieDetailComponent',
+    name: 'TheTVDetailComponent',
 
     template:`
-        <section class"k-movie-expand">
-            Detail
+    <h2>The tv details</h2>
+        <section>
+            <img :src="tv.image" :alt="tv.title">
+            <p>{{ tv.plot }}</p>
         </section>
     `,
 
     
     data() {
         return {
-            movies: [],
+            tv: [],
         };
     },
 
     mounted() {
-        this.fetchMovies();
+        this.fetchTV();
     },
 
     methods: {
 
-        fetchMovies() {
+        fetchTV() {
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
             };
 
-            fetch('https://imdb-api.com/API/AdvancedSearch/k_xq3uunx4?title_type=feature&release_date=1923-01-01,2023-01-01&certificates=us:G,us:PG,us:PG-13,us:R,us:NC-17', requestOptions)
+            const tvId = this.$route.params.tvId;
+
+            fetch(`https://imdb-api.com/en/API/Title/k_xq3uunx4/${tvId}`, requestOptions)
                 .then(response => response.json())
                 .then(data => {
-                    this.movies = data.results;
-                    console.log(data);
+                    this.tv = data;
+                    //console.log(data);
                 })
                 .catch(error => console.log('error', error));
         },

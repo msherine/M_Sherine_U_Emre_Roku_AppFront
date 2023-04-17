@@ -9,7 +9,9 @@ export default {
 
         <div class="k-movie-list">
             <div class="movie-feature-card" v-for="movie in movies" :key="movie.id">
+            <router-link :to="{ name: 'moviedetail', params: { movieId: movie.id } }">
                 <img :src="movie.image" :alt="movie.title" class="feature-img">
+            </router-link>    
                 <div class="k-movie-detail">
                     <h2>{{ movie.title }}</h2>
                     <p>Year: {{ movie.description }}</p>
@@ -17,7 +19,7 @@ export default {
                     <p>imDB rating: {{ movie.imDbRating }}</p>
                 </div>
             </div>
-        </div>
+        </div> 
     </section>`,
 
     data() {
