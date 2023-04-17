@@ -5,6 +5,16 @@ import AllUsersPage from './components/TheAllUsersComponent.js';
 import DefaultHome from './components/TheHomePage.js';
 import KidsHome from './components/TheKidsHomePage.js';
 
+
+import AdultPodcast from './components/ThePodcastPage.js';
+import PodcastDetails from './components/ThePodcastDetails.js';
+
+import AdultTv from './components/TheTVPage.js';
+import TvDetails from './components/TheTVDetails.js';
+
+
+import MovieDetail from './components/TheMovieDetail.js';
+
 const { createApp } = Vue;
 // import the createApp method from the Vue library
 
@@ -40,6 +50,36 @@ const router = VueRouter.createRouter({
             name: 'kidshome',
             component: KidsHome
         },
+
+        {
+            path: '/movie/:movieId', // this would be kids homepage
+            name: 'moviedetail',
+            component: MovieDetail
+        },
+
+        {
+            path: '/podcast', // this would be kids homepage
+            name: 'AdultPodcast',
+            component: AdultPodcast
+        },
+
+        {
+            path: '/podcast/:podcastId', // this would be kids homepage
+            name: 'podcastdetail',
+            component: PodcastDetails
+        },
+
+        {
+            path: '/tv', // this would be kids homepage
+            name: 'AdultTv',
+            component: AdultTv
+        },
+
+        {
+            path: '/tv/:tvId', // this would be kids homepage
+            name: 'Tvdetail',
+            component: TvDetails
+        }
         
 
         // { 

@@ -1,25 +1,45 @@
 const apiKey = 'k_xq3uunx4';
 
 export default {
-    name: 'TheHomePageComponent',
+    name: 'TheAdultHomePageComponent',
 
     template: `
+
+    <section class="header">
+    <nav class="">
+        <ul>
+          <li class=""><router-link to="/home">Movies</router-link></li>
+          <li><router-link to="/tv">TV Shows</router-link></li>
+          <li><router-link to="/podcast">Podcasts</router-link></li>
+        </ul>
+      </nav>
+    </section>
     <section>
-        <h1>This is the default home page</h1>
-        <section class="movie"> 
-            <div v-for="movie in movies" :key="movie.id">
-                <img :src="movie.image" :alt="movie.title">
-                <h2>{{ movie.title }}</h2>
+        <h1>This is the Adults home page</h1>
+
+        <div class="k-movie-list">
+            <div class="movie-feature-card" v-for="movie in movies" :key="movie.id">
+            <router-link :to="{ name: 'moviedetail', params: { movieId: movie.id } }">
+                <img :src="movie.image" :alt="movie.title" class="feature-img">
+            </router-link>    
+                <div class="k-movie-detail">
+                    <h2>{{ movie.title }}</h2>
+                    <p>Year: {{ movie.description }}</p>
+                    <p>Run-time: {{ movie.runtimeStr }}</p>
+                    <p>imDB rating: {{ movie.imDbRating }}</p>
+                </div>
             </div>
-        </section>
+        </div> 
     </section>`,
+
 
     data() {
         return {
-            movies: []
+            movies: [],
         };
     },
 
+    
     mounted() {
         this.fetchMovies();
     },
@@ -27,6 +47,7 @@ export default {
     methods: {
 
         fetchMovies() {
+            console.log("fetchMovies");
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
@@ -40,5 +61,6 @@ export default {
                 })
                 .catch(error => console.log('error', error));
         },
+
     }
 }
