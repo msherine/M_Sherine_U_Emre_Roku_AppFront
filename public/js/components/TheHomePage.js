@@ -6,7 +6,7 @@ export default {
     template: `
 
     <section class="header">
-    <nav class="">
+    <nav class="headers-nav">
         <ul>
           <li class=""><router-link to="/home">Movies</router-link></li>
           <li><router-link to="/tv">TV Shows</router-link></li>
@@ -14,8 +14,9 @@ export default {
         </ul>
       </nav>
     </section>
+
     <section>
-        <h1>This is the Adults home page</h1>
+        <h1 hidden>This is the Adults home page</h1>
 
         <div class="k-movie-list">
             <div class="movie-feature-card" v-for="movie in movies" :key="movie.id">
@@ -23,7 +24,7 @@ export default {
                 <img :src="movie.image" :alt="movie.title" class="feature-img">
             </router-link>    
                 <div class="k-movie-detail">
-                    <h2>{{ movie.title }}</h2>
+                    <p>{{ movie.title }}</p>
                     <p>Year: {{ movie.description }}</p>
                     <p>Run-time: {{ movie.runtimeStr }}</p>
                     <p>imDB rating: {{ movie.imDbRating }}</p>

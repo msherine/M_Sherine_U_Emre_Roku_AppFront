@@ -1,0 +1,154 @@
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    
+    .profiles{
+        margin-top: 15rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    .users{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+
+        p{
+            font-size: 1rem;
+        }
+
+        img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+          }
+    }
+     
+
+    //Logo
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        // align-items: left;
+        margin: 2rem 2rem;
+
+        img{
+            width:7rem;
+            height: auto;
+        }
+    }
+
+    
+    //Log Out
+    .log_out{
+        img{
+            width: 30%;
+            height: auto;
+        }
+    }
+
+    //LOGiN PAGE
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // border: red solid 2px;
+        height: 50vh;
+    }
+
+
+    .log-in{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        color: $yellow;
+
+        input{
+            width:25rem;
+            height: 2.5rem;
+            text-align: center;
+        }
+
+    }
+
+    .logIn_button{
+        button{
+            width:8rem;
+            height: 3rem;
+            border:none;
+        }
+    }
+
+        //User Page
+
+        .users img:hover{
+            border: $yellow 4px solid;
+        }
+
+            //headers
+    .headers-nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.5rem;
+        margin-bottom: 3rem;
+
+        li a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.75rem;
+        }
+    }
+
+    .headers-nav ul li a:hover{
+        color:$yellow;
+    }
+
+            //detail Page
+
+    .detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2rem;
+
+        img{
+            width:10rem;
+            height:auto;
+        }
+
+        p{
+            font-size: 1rem;
+            color: white;
+
+            span{
+                font-weight: 700;
+                font-size: 2rem;
+                color: $yellow;
+            }
+        }
+    }
+
+    .video-button{
+        button{
+            width:8rem;
+            height:3rem;
+            color: white;
+            font-size: 1rem;
+            background-color: $yellow;
+            border: none;
+        }
+    }
+  }
+  

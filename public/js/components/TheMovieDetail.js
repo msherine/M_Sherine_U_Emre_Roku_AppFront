@@ -4,14 +4,16 @@ export default {
     name: 'TheMovieDetailComponent',
 
     template:`
-        <section>
-        <h2>The movie details</h2>
+        <section class="details">
+            <h2 hidden>The movie details</h2>
             <img :src="movie.image" :alt="movie.title">
-            <p>{{ movie.plot }}</p>
+            <p><span>Plot:</span>     {{ movie.plot }}</p>
+            <div class="video-button">
+            <button @click="playVideo">Play Video</button>
+            </div>
         </section>
     `,
 
-    
     data() {
         return {
             movie: [],
@@ -23,7 +25,6 @@ export default {
     },
 
     methods: {
-
         fetchMovie() {
             var requestOptions = {
                 method: 'GET',
@@ -32,14 +33,23 @@ export default {
 
             const movieId = this.$route.params.movieId;
 
-            fetch(`https://imdb-api.com/en/API/Title/k_xq3uunx4/${movieId}`, requestOptions)
+            fetch(`https://imdb-api.com/en/API/Title/${apiKey}/${movieId}`, requestOptions)
                 .then(response => response.json())
                 .then(data => {
                     this.movie = data;
-                    //console.log(data);
                 })
                 .catch(error => console.log('error', error));
         },
-    }
 
+        playVideo() {
+            const videoUrl = '/videos/video-trailer.mp4';
+            const videoPlayer = document.createElement('video');
+            videoPlayer.setAttribute('src', videoUrl);
+            videoPlayer.setAttribute('controls', true);
+            videoPlayer.setAttribute('autoplay', true);
+            document.body.appendChild(videoPlayer); // append the element to the DOM
+            videoPlayer.requestFullscreen();
+        }
+        
+    }
 }

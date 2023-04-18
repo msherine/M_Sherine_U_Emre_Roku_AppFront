@@ -3,22 +3,18 @@ export default {
 
   template:
     `
-    <section class="container">
-      <div class="jumbotron">
-          <h1>Welcome to Flashblack!</h1>
-          <p class="lead">
-          Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.
-          </p>
+    <div class="container">
+  
+      <div class="log-in">
+        <label hidden for="inlineFormInputName">Name</label>
+        <input class="logInInput"
+         ref="username" v-model="username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
+  
+        <label hidden for="inlineFormPassword">Password</label>
+        <input class="logInInput" ref="password" v-model="password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
       </div>
   
-      <section class="log-in">
-        <label class="sr-only" for="inlineFormInputName">Name</label>
-        <input ref="username" v-model="username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
-  
-        <label class="sr-only" for="inlineFormPassword">Password</label>
-        <input ref="password" v-model="password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
-      </section>
-  
+      <div class="logIn_button">
       <button @click="tryLogIn"
           type="submit" 
           class="btn btn-primary login-submit"
@@ -32,7 +28,9 @@ export default {
           class="btn btn-primary login-submit signup"
         >Join!
       </button>
-    </section>`,
+      </div>
+
+    </div>`,
 
   data() {
     return {

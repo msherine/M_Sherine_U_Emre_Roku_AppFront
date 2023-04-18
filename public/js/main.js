@@ -1,9 +1,11 @@
 //  imports always go at the top
 import LogInPage from './components/TheLoginComponents.js';
-// import UsersComponent from './components/TheUsersComponents.js';
+
 import AllUsersPage from './components/TheAllUsersComponent.js';
 import DefaultHome from './components/TheHomePage.js';
 import KidsHome from './components/TheKidsHomePage.js';
+import Kidstv from './components/TheKidsTvPage.js';
+import Kidspodcasts from './components/TheKidsPodcastPage.js';
 
 
 import AdultPodcast from './components/ThePodcastPage.js';
@@ -49,6 +51,20 @@ const router = VueRouter.createRouter({
             path: '/kidshome', // this would be kids homepage
             name: 'kidshome',
             component: KidsHome
+        },
+
+        
+        {
+            path: '/kidstv', // this would be kids homepage
+            name: 'KidsTV',
+            component: Kidstv
+        },
+
+        
+        {
+            path: '/kidspodcasts', // this would be kids homepage
+            name: 'Kidspodcast',
+            component: Kidspodcasts
         },
 
         {
