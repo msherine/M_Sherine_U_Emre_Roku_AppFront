@@ -1,0 +1,170 @@
+    //Logo
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        // align-items: left;
+        margin: 2rem 2rem;
+
+        img{
+            width:6rem;
+            height: auto;
+        }
+    }
+
+    
+    //Log Out
+    .log_out{
+        img{
+            width: 20%;
+            height: auto;
+        }
+    }
+
+    //footer
+
+    footer{
+        p{
+            font-size: 1rem;
+            margin: 2rem 2rem;
+        }
+    }
+
+//LOGiN PAGE
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: red solid 2px;
+    height: 30vh;
+}
+
+
+.log-in{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    color: $yellow;
+
+    input{
+        width:20rem;
+        height: 2rem;
+        text-align: center;
+    }
+
+}
+
+.logIn_button{
+    button{
+        width:6rem;
+        height: 2rem;
+        border:none;
+    }
+    
+}
+
+    //User Page
+
+    .profiles{
+        margin-top: 15rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+    .users{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+
+        p{
+            font-size: 1rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+    }
+     
+
+      
+
+    .users img:hover{
+        border: $yellow 3px solid;
+    }
+
+    .users img{
+        width:10%;
+        height: auto;
+    }
+
+        //headers
+        .headers-nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1rem;
+            margin-bottom: 2rem;
+    
+            li a{
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            }
+        }
+    
+        .headers-nav ul li a:hover{
+            color:$yellow;
+        }
+
+    //detail Page
+
+    .detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+
+        img{
+            width:10rem;
+            height:auto;
+        }
+
+        p{
+            font-size: 1rem;
+            color: white;
+
+            span{
+                font-weight: 700;
+                font-size: 2rem;
+                color: $yellow;
+            }
+        }
+
+        .video-button{
+            button{
+                width:6rem;
+                height:2.5rem;
+                color: white;
+                font-size: 1rem;
+                background-color: $yellow;
+                border: none;
+            }
+        }
+
+        .profile img{
+            width:50%;
+            height: auto;
+        }
+    }

@@ -4,10 +4,13 @@ export default {
     name: 'TheTVDetailComponent',
 
     template:`
-    <h2>The tv details</h2>
-        <section>
+        <section class="details">
+            <h2 hidden>The tv details</h2>
             <img :src="tv.image" :alt="tv.title">
-            <p>{{ tv.plot }}</p>
+            <p><span>Plot:</span> {{ tv.plot }}</p>
+            <div class="video-button">
+            <button @click="playVideo">Play Video</button>
+            </div>
         </section>
     `,
 
@@ -40,6 +43,16 @@ export default {
                 })
                 .catch(error => console.log('error', error));
         },
+
+        playVideo() {
+            const videoUrl = '/videos/video-trailer.mp4';
+            const videoPlayer = document.createElement('video');
+            videoPlayer.setAttribute('src', videoUrl);
+            videoPlayer.setAttribute('controls', true);
+            videoPlayer.setAttribute('autoplay', true);
+            document.body.appendChild(videoPlayer); // append the element to the DOM
+            videoPlayer.requestFullscreen();
+        }
     }
 
 }

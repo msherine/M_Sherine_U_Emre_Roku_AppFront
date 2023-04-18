@@ -5,11 +5,11 @@ export default {
 
     template:`
     <section class="user-panel">
-        <h2>Who's using Roku?</h2>
+        <h2 hidden>Who's using Roku?</h2>
 
         <section> 
             <ul>
-                <li>
+                <li class="profiles">
                     <user v-for="user in users" :user="user"></user>
                 </li>
             </ul>
